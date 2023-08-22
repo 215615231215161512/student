@@ -1,0 +1,209 @@
+
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,shrink-to-fit=no"/>
+    <meta name="MobileOptimized" content="240"/>
+    <meta name="apple-touch-fullscreen" content="YES"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection"/>
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title></title>
+    <style>
+        * {
+            font-size: 0.28rem;
+            line-height: 1.5;
+            margin:0;
+            padding: 0;
+        }
+
+        html,body {
+            margin: auto;
+            padding: 0;
+            background-color: #F2F2F2;
+            -webkit-text-size-adjust: 100% !important;
+            text-size-adjust: 100% !important;
+            -moz-text-size-adjust: 100% !important;
+        }
+        .pageshow {
+            margin: auto;
+            padding: 0.2rem 0.2rem;
+            background-color: #ffffff;
+            clear: both;
+            overflow: hidden;
+        }
+        p{
+            padding: 0.06rem 0;
+        }
+        .div_img {
+            width: 100%;
+        }
+        .div_audio {
+            width: 100%;
+            margin-bottom: 0.01rem;
+        }
+        .div_video {
+            width: 100%;
+            margin-bottom: 0.01rem;
+            object-fit: fill;
+        }
+        .div_txt {
+            font-size: 0.28rem;
+            line-height: 1.5;
+            white-space: pre-wrap; /* css-3 */
+        　　white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+        　　white-space: -pre-wrap; /* Opera 4-6 */
+        　　white-space: -o-pre-wrap; /* Opera 7 */
+        　　word-wrap: break-word; /* Internet Explorer 5.5+ */
+        }
+        .div_title {
+            font-size: 0.32rem;
+            line-height: 1.5;
+            font-weight: bold;
+        }
+
+        .div_jubao {
+            font-size: 0.26rem;
+            text-align: right;
+            padding-right: 0.1rem;
+            color: #0d7aff;
+        }
+
+        .file_icon1{
+            width: 0.6rem;
+            height: 0.6rem;
+            background: url("http://tzapp.sunjoy.info/public/h5file/file_w.png") no-repeat;
+            background-size:contain;
+            float: left;
+        }
+        .file_icon2{
+            width: 0.6rem;
+            height: 0.6rem;
+            background: url("http://tzapp.sunjoy.info/public/h5file/file_w.png") no-repeat;
+            background-size:contain;
+            float: left;
+        }
+        .file_icon3{
+            width: 0.6rem;
+            height: 0.6rem;
+            background: url("http://tzapp.sunjoy.info/public/h5file/file_p.png") no-repeat;
+            background-size:contain;
+            float: left;
+        }
+        .file_icon4{
+            width: 0.6rem;
+            height: 0.6rem;
+            background: url("http://tzapp.sunjoy.info/public/h5file/file_t.png") no-repeat;
+            background-size:contain;
+            float: left;
+        }
+        .file_name{
+            color: #333333;
+            font-size: 0.3rem;
+            line-height: 0.6rem;
+            padding-left: 0.05rem;
+            float: left;
+        }
+        .file_but{
+            width: 0.8rem;
+            height: 0.4rem;
+            margin-right: 0.1rem;
+            margin-top: 0.1rem;
+            background: #3796FF;
+            border-radius: 0.06rem;
+            border: none;
+            font-size: 0.22rem;
+            color: #ffffff;
+            float: right;
+        }
+        .pwd_img {
+            margin-top: 2rem;
+            width: 1.87rem
+        }
+
+        .pwd_txt {
+            margin-top: 2rem;
+            margin-bottom: 0.2rem;
+            color: #666666;
+            font-size: 0.3rem;
+        }
+
+        .pwd_input {
+            width: 2.76rem;
+            height: 0.64rem;
+            background: #FFFFFF;
+            border-radius: 0.08rem;
+            border: 0;
+            margin-bottom: 1.20rem;
+            font-size: 0.3rem;
+            line-height: 0.3rem;
+        }
+
+        .pwd_but {
+            width: 5.4rem;
+            height: 0.88rem;
+            border: none;
+            background: linear-gradient(90deg, #76B7FF 0%, #3796FF 100%);
+            border-radius: 0.1rem;
+            color: #ffffff;
+            font-size: 0.34rem;
+        }
+
+        .noinfo {
+            text-align: center;
+            color: red;
+            font-weight: bold;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<script type="text/javascript" src="http://tzapp.sunjoy.info/public/h5file/js/zepto.min.js"></script>
+<script>
+    !(function (doc, win) {
+        var docEle = doc.documentElement,
+            event = "onorientationchange" in window ? "orientationchange" : "resize",
+            fn = function () {
+                var width = docEle.clientWidth;
+                if (width > 750) {
+                    docEle.style.fontSize = "100px";
+                } else {
+                    width && (docEle.style.fontSize = 100 * (width / 750) + "px");
+                }
+            };
+        win.addEventListener(event, fn, false);
+        doc.addEventListener("DOMContentLoaded", fn, false);
+        win.onresize = function () {
+            fn();
+        };
+    })(document, window);
+</script>
+<body>
+<p><img class="div_img" src="http://file.sljoy.cn/upload/image/2023/08/22/2230319030.png"/></p></div><script type="text/javascript" src="http://tzapp.sunjoy.info/public/h5file/js/newiapp.js?t=20200427"></script>
+<script type="text/javascript" src="http://tzapp.sunjoy.info/qr/stats/1frn6dvx7lc"></script>
+<script>
+    var isApp=newiapp.isAPP();
+    if(isApp){
+        $('.div_jubao').hide();
+    }
+    $(function () {
+        $(".div_jubao").click(function () {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                window.location.href = 'http://tzapp.sunjoy.info/upload/tousu/';
+            }else{
+                window.location.href = 'http://tzapp.sunjoy.info/h5app/report/';
+            }
+        });
+    });
+</script>
+</body>
+</html>
